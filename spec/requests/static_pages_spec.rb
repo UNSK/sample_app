@@ -36,7 +36,7 @@ describe "Static pages" do
     it_should_behave_like "all static pages"
   end
 
-  describe "Contact" do
+  describe "Contact page" do
     before { visit contact_path }
     page_name = 'Contact'
     let(:heading) { page_name }
