@@ -43,4 +43,11 @@ describe "MicropostPages" do
       end
     end
   end
+
+  describe "should not delete other user's micropost" do
+    let(:other_user) { FactoryGirl.create(:user) }
+    let(:other_user_micropost) { FactoryGirl.create(:micropost, user: other_user) }
+    before { visit user_path(other_user) }
+    it { should_not have_link("delete") }
+  end
 end
