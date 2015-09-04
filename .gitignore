@@ -23,3 +23,7 @@ doc/
 .DS_Store
 .idea
 .secret
+
+# Ignore intelliJ files
+/out
+*.iml
